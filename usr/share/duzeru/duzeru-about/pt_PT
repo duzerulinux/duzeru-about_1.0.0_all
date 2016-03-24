@@ -1,0 +1,31 @@
+# Arquivo de localização para Portugues de Portugal do DuZeru About.
+# Copyright 2016 Claudio A. Silva 2016/04/24
+# Sob a Licença GNU GPL v2
+# Última atualização Tuesday 02 February 18:17:40 WET 2016
+
+LOCAL1="Sobre DuZeru"
+LOCAL2="Outros"
+LOCAL3="Nome do Sistema Operativo"
+LOCAL4="A Versão do Sistema Operativo"
+LOCAL5="Nome do Código Sistema Operativo"
+LOCAL6="Data e hora"
+LOCAL7="Fuso horário"
+LOCAL8="Hostname"
+LOCAL9="Tempo de atividade (Uptime)"
+LOCAL10="Kernel"
+LOCAL11="Total de RAM"
+LOCAL12="Total de SWAP"
+LOCAL13="Gestor de janelas"
+LOCAL14="Local"
+LOCAL15="Arquitetura estrangeira Ativada"
+LOCAL16="Utilizador"
+LOCAL17="ID do Utilizador"
+LOCAL18="Grupos de Utilizadores"
+LOCAL19="Web Site do DuZeru"
+LOCAL20="Comunidade"
+LOCAL21="Wiki"
+LOCAL22="Rastreador de bugs"
+
+### Arquivo a ser traduzido também .desktop
+# Name[pt_PT]=Sobre DuZeru
+# Comment[pt_PT]=Informações básicas sobre DuZeru

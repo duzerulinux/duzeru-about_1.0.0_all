@@ -1,0 +1,30 @@
+#Arquivo de localização para o Português do Brasil para o DuZeru  
+# Copyright 2016 Claudio A. Silva 2016/04/24
+# Sob a licença GNU GPL v2
+
+LOCAL1="Sobre o DuZeru"
+LOCAL2="Outros"
+LOCAL3="Nome do SO"
+LOCAL4="Nome da Versão"
+LOCAL5="Nome do Código do SO"
+LOCAL6="Data e Horário"
+LOCAL7="Fuso Horário"
+LOCAL8="Computador Hospedeiro"
+LOCAL9="Hora de Uptime"
+LOCAL10="Kernel"
+LOCAL11="Total de RAM"
+LOCAL12="Total de SWAP"
+LOCAL13="Gerenciador de Janela"
+LOCAL14="Localização"
+LOCAL15="Arquitetura Diferente (Foreign) Habilitada"
+LOCAL16="Usuário"
+LOCAL17="ID do Usuário"
+LOCAL18="Grupo de Usuário"
+LOCAL19="Web Site do DuZeru"
+LOCAL20="Comunidade"
+LOCAL21="Wiki"
+LOCAL22="Anotador de Erros e Falhas"
+
+### .desktop file to be translated too
+# Name[pt_BR]=Sobre o DuZeru
+# Comment[pt_BR]=Informações básicas sobre o DuZeru

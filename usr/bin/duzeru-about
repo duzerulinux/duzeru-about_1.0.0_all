@@ -1,0 +1,145 @@
+#!/bin/bash
+
+# DuZeru About uses a few tools to display some system informations
+# via a GUI frontend built by Yad
+#
+# Created by Claudio A. Silva 2016/03/24
+# 
+# Copyright 2015, 2016 under the GNU GPL2 License
+
+# obter o arquivo locale do padrão
+DEFLOCDIR="/usr/share/duzeru/duzeru-about"
+if [ "`cat /etc/default/locale | grep de_DE`" != "" ]; then
+. $DEFLOCDIR/de
+elif [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
+. $DEFLOCDIR/es
+elif [ "`cat /etc/default/locale | grep it_IT`" != "" ]; then
+. $DEFLOCDIR/it
+elif [ "`cat /etc/default/locale | grep ja_JP`" != "" ]; then
+. $DEFLOCDIR/ja
+elif [ "`cat /etc/default/locale | grep pl_PL`" != "" ]; then
+. $DEFLOCDIR/pl
+elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
+. $DEFLOCDIR/pt_BR
+elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
+. $DEFLOCDIR/pt_PT
+elif [ "`cat /etc/default/locale | grep ru_RU`" != "" ]; then
+. $DEFLOCDIR/ru
+elif [ "`cat /etc/default/locale | grep sv_SE`" != "" ]; then
+. $DEFLOCDIR/se
+else
+. $DEFLOCDIR/en
+fi
+
+DIALOG="yad --window-icon=/usr/share/icons/duzeru/about/duzeru48.png --width=550 --height=430 --center"
+TITLE="--always-print-result --dialog-sep --image=/usr/share/icons/duzeru/about/duzeru128.png --title="
+TEXT="--text="
+NOBUTTONS="--no-buttons"
+TITLETEXT="$LOCAL1"
+OSNAME="`lsb_release -d | awk '{print $2}'`"
+OSVERSION="`lsb_release -r | awk '{print $2}'`"
+OSCODE="`lsb_release -c | awk '{print $2}'`"
+PRINTDATE="`date '+%a %F %T'`"
+PRINTTIMEZONE="`cat /etc/timezone`"
+HOST="`uname -n`"
+UPTIME="`uptime -p`"
+KERNEL="`uname -r`"
+RAMTOTAL="`cat /proc/meminfo | grep MemTotal | awk '{print $2}'`"
+SWAPTOTAL="`cat /proc/meminfo | grep SwapTotal | awk '{print $2}'`"
+PRINTLOCALE="`locale | grep 'LANG=' | cut -d= -f2`"
+USER="`whoami`"
+USERID="`id -u`"
+USERGROUPS="`groups`"
+FONT="font_weight='bold' foreground='dark blue'"
+FOREIGN=`dpkg --print-foreign-architectures | awk '{print $1}'`
+if [ "$FOREIGN" = "" ]; then
+PRINTARCH=""
+else
+PRINTARCH="$FOREIGN"
+fi
+
+## Obter o nome do gerenciador de janelas
+if [ $(pidof afterstep) ]; then
+WMNAME="Afterstep"
+elif [ $(pidof awesome) ]; then
+WMNAME="Awesome"
+elif [ $(pidof blackbox) ]; then
+WMNAME="Blackbox"
+elif [ $(pidof budgie-wm) ]; then
+WMNAME="BudgieWM"
+elif [ $(pidof catwm) ]; then
+WMNAME="Catwm"
+elif [ $(pidof cinnamon) ]; then
+WMNAME="Muffin"
+elif [ $(pidof compiz) ]; then
+WMNAME="Compiz"
+elif [ $(pidof dwm) ]; then
+WMNAME="Dwm"
+elif [ $(pidof edewm) ]; then
+WMNAME="Edewm"
+elif [ $(pidof enlightenment) ]; then
+WMNAME="Enlightenment"
+elif [ $(pidof fluxbox) ]; then
+WMNAME="Fluxbox"
+elif [ $(pidof fvwm) ]; then
+WMNAME="FVWM"
+elif [ $(pidof gala) ]; then
+WMNAME="Gala"
+elif [ $(pidof i3) ]; then
+WMNAME="i3"
+elif [ $(pidof icewm) ]; then
+WMNAME="IceWM"
+elif [ $(pidof jwm) ]; then
+WMNAME="JWM"
+elif [ $(pidof kwin) ]; then
+WMNAME="KWin"
+elif [ $(pidof kwin_x11) ]; then
+WMNAME="KWin_x11"
+elif [ $(pidof marco) ]; then
+WMNAME="Marco"
+elif [ $(pidof metacity) ]; then
+WMNAME="Metacity"
+elif [ $(pidof gnome-shell) ]; then
+WMNAME="Mutter"
+elif [ $(pidof openbox) ]; then
+WMNAME="Openbox"
+elif [ $(pidof pekwm) ]; then
+WMNAME="Pekwm"
+elif [ $(pidof ratpoison) ]; then
+WMNAME="Ratpoison"
+elif [ $(pidof sawfish) ]; then
+WMNAME="Sawfish"
+elif [ $(pidof twm) ]; then
+WMNAME="Twm"
+elif [ $(pidof wmaker) ]; then
+WMNAME="Window Maker"
+elif [ $(pidof xfwm4) ]; then
+WMNAME="Xfwm4"
+else
+WMNAME="$LOCAL2"
+fi
+
+## Construindo a janela
+$DIALOG $TITLE"$TITLETEXT" $NOBUTTONS $TEXT\
+"<span $FONT>$LOCAL3: </span>$OSNAME\n\
+<span $FONT>$LOCAL4: </span>$OSVERSION\n\
+<span $FONT>$LOCAL5: </span>$OSCODE\n\n\
+<span $FONT>$LOCAL6: </span>$PRINTDATE\n\
+<span $FONT>$LOCAL7: </span>$PRINTTIMEZONE\n\n\
+<span $FONT>$LOCAL8: </span>$HOST\n\
+<span $FONT>$LOCAL9: </span>$UPTIME\n\
+<span $FONT>$LOCAL10: </span>$KERNEL\n\
+<span $FONT>$LOCAL11: </span>$RAMTOTAL kB\n\
+<span $FONT>$LOCAL12: </span>$SWAPTOTAL kB\n\
+<span $FONT>$LOCAL13: </span>$WMNAME\n\
+<span $FONT>$LOCAL14: </span>$PRINTLOCALE\n\
+<span $FONT>$LOCAL15: </span>$PRINTARCH\n\n\
+<span $FONT>$LOCAL16: </span>$USER\n\
+<span $FONT>$LOCAL17: </span>$USERID\n\
+<span $FONT>$LOCAL18: </span>$USERGROUPS\n\n\
+<span $FONT>$LOCAL19: </span>http://duzeru.org\n\
+<span $FONT>$LOCAL20: </span>http://duzeru.org\n\
+<span $FONT>$LOCAL21: </span>http://duzeru.org\n\
+<span $FONT>$LOCAL22: </span>http://duzeru.org"
+
+exit 0

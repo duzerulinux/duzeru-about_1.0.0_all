@@ -1,0 +1,30 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=About DuZeru
+GenericName=About DuZeru
+Name[de_DE]=Über DuZeru
+Name[es_AR]=Acerca de DuZeru
+Name[ja_JP]=DuZeru について
+Name[pl_PL]=O DuZeru
+Name[pt_BR]=Sobre o DuZeru
+Name[pt_PT]=Sobre DuZeru
+Name[ru_RU]=О DuZeru
+Name[sv_SE]=Om DuZeru
+Comment=Basic informations about DuZeru
+Comment[de_DE]=Informationen über DuZeru und das System
+Comment[es_AR]=Informaciones básicas acerca de DuZeru
+Comment[it_IT]=Informazioni di base circa DuZeru
+Comment[ja_JP]=DuZeru についての基本情報
+Comment[pl_PL]=Podstawowe informacje o DuZeru
+Comment[pt_BR]=Informações básicas sobre o DuZeru
+Comment[pt_PT]=Informações básicas sobre DuZeru
+Comment[ru_RU]=Основная информация о DuZeru
+Comment[sv_SE]=Grundläggande information om DuZeru
+Exec=/usr/bin/duzeru-about
+Icon=/usr/share/icons/duzeru/about/duzeru48.png
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Applications;System
+

@@ -1,0 +1,11 @@
+Package: duzeru-about
+Version: 1.0.0
+Architecture: all
+Maintainer: Claudio A. Silva <claudiosilva@duzeru.org>
+Installed-Size: 156
+Depends: coreutils, grep, gawk, lsb-release, procps, duzeru-info, yad
+Section: System
+Priority: optional
+Description: DuZeru About
+  DuZeru About uses a few tools to display basic system informations via a GUI frontend built by Yad.
+

@@ -1,0 +1,30 @@
+# Svensk språkfil för DuZeru  Om.
+# Copyright 2016 Claudio A. Silva 2016/04/24
+# Under GNU GPL v2
+
+LOCAL1="Om DuZeru "
+LOCAL2="Annat"
+LOCAL3="OS-Namn"
+LOCAL4="OS-Version"
+LOCAL5="OS-Kodnamn"
+LOCAL6="Datum och tid"
+LOCAL7="Tidszon"
+LOCAL8="Värd"
+LOCAL9="Uptime"
+LOCAL10="Kernel"
+LOCAL11="RAM Totalt"
+LOCAL12="SWAP Totalt"
+LOCAL13="Fönsterhanterare"
+LOCAL14="Plats"
+LOCAL15="Okänd arkitektur aktiverad"
+LOCAL16="Användare"
+LOCAL17="Användar-ID"
+LOCAL18="Användargrupper"
+LOCAL19="DuZeru  webbplats"
+LOCAL20="Gemenskap"
+LOCAL21="Wiki"
+LOCAL22="Buggspårare"
+
+### .desktop file to be translated too
+# Name[sv_SE]=Om DuZeru 
+# Comment[sv_SE]=Grundläggande information om DuZeru

@@ -1,0 +1,30 @@
+# German localization file for DuZeru About.
+# Copyright 2016 Claudio A. Silva 2016/04/24
+# Under the GNU GPL v2
+
+LOCAL1="Über DuZeru"
+LOCAL2="Andere"
+LOCAL3="OS Name"
+LOCAL4="OS Version"
+LOCAL5="OS Code Name"
+LOCAL6="Datum und Zeit"
+LOCAL7="Zeitzone"
+LOCAL8="Host"
+LOCAL9="Uptime"
+LOCAL10="Kernel"
+LOCAL11="RAM Total"
+LOCAL12="SWAP Total"
+LOCAL13="Window Manager"
+LOCAL14="Locale"
+LOCAL15="Foreign Architecture Enabled"
+LOCAL16="Benutzer"
+LOCAL17="Benutzer ID"
+LOCAL18="Benutzer Gruppen"
+LOCAL19="DuZeru Webseite"
+LOCAL20="Community"
+LOCAL21="Wiki"
+LOCAL22="Bug Tracker"
+
+### .desktop file to be translated too
+# Name[de_DE]=Über DuZeru
+# Comment[de_DE]=Informationen über DuZeru und das System

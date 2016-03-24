@@ -1,0 +1,30 @@
+# Archivo de localización en español para DuZeru About.
+# Copyright 2016 Claudio A. Silva 2016/04/24
+# Bajo la licencia GNU GPL v2
+
+LOCAL1="Acerca de DuZeru"
+LOCAL2="Otro"
+LOCAL3="Nombre del SO"
+LOCAL4="Version del SO"
+LOCAL5="Nombre Código del SO"
+LOCAL6="Fecha y Hora"
+LOCAL7="Zona Horaria"
+LOCAL8="Host"
+LOCAL9="Tiempo en funcionamiento"
+LOCAL10="Kernel"
+LOCAL11="RAM Total"
+LOCAL12="SWAP Total"
+LOCAL13="Administrador de Ventanas"
+LOCAL14="Localización"
+LOCAL15="Arquitectura externa habilitada"
+LOCAL16="Usuario"
+LOCAL17="ID del usuario"
+LOCAL18="Grupos de usuarios"
+LOCAL19="Sitio Web de DuZeru"
+LOCAL20="Comunidad"
+LOCAL21="Wiki"
+LOCAL22="Seguimiento de errores"
+
+### .desktop file to be translated too
+# Name[es_AR]=Acerca de DuZeru
+# Comment[es_AR]=Informaciones básicas acerca de DuZeru

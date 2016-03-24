@@ -1,0 +1,12 @@
+#!/bin/sh
+# postinst script
+#
+# see: dh_installdeb(1)
+
+set -e
+
+if [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+
+
